@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.example.android.quizapp.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/start_layout"
+            android:layout_width="match_parent"
+            android:layout_height="510dp">
+
+            <TextView
+                android:id="@+id/let_us_begin"
+                style="@style/let_us_begin_style"
+                android:text="@string/let_us_begin_string"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_view"
+                style="@style/text_view_style"
+                android:text="@string/text_view_string"
+                app:layout_constraintBottom_toTopOf="@+id/start"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/let_us_begin" />
+
+
+            <Button
+                android:id="@+id/start"
+                style="@style/start"
+                android:onClick="start"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/header_layout"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/next"
+                style="@style/next_style"
+                android:onClick="next"
+                android:text="@string/next_string"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.51" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FF9800">
+
+            <TextView
+                android:id="@+id/question_text_view"
+                style="@style/question_text_view_style"
+                android:text="@string/question_text_view_string"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </android.support.constraint.ConstraintLayout>
+        <!--CheckBox options o-->
+        <LinearLayout
+            android:id="@+id/check_box_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <CheckBox
+                android:id="@+id/first_option_checkBox"
+                style="@style/optionCheckBox"
+                android:text="@string/first_option_checkBox_string" />
+
+            <CheckBox
+                android:id="@+id/second_option_checkBox"
+                style="@style/optionCheckBox"
+                android:text="@string/second_option_checkBox_string" />
+
+            <CheckBox
+                android:id="@+id/third_option_checkBox"
+                style="@style/optionCheckBox"
+                android:text="@string/third_option_checkBox_string" />
+
+            <CheckBox
+                android:id="@+id/forth_option_checkBox"
+                style="@style/optionCheckBox"
+                android:text="@string/forth_option_checkBox_string" />
+
+        </LinearLayout>
+
+        <!--RadioButton options o-->
+        <RadioGroup
+            android:id="@+id/radio_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+
+            <RadioButton
+                android:id="@+id/first_option_radio_button"
+                style="@style/optionRadioGroup"
+                android:text="@string/first_option_radio_button_string" />
+
+            <RadioButton
+                android:id="@+id/second_option_radio_button"
+                style="@style/optionRadioGroup"
+                android:text="@string/second_option_radio_button_string" />
+
+            <RadioButton
+                android:id="@+id/third_option_radio_button"
+                style="@style/optionRadioGroup"
+                android:text="@string/third_option_radio_button_string" />
+
+            <RadioButton
+                android:id="@+id/forth_option_radio_button"
+                style="@style/optionRadioGroup"
+                android:text="@string/forth_option_radio_button_string" />
+
+        </RadioGroup>
+
+        <!--EditText options-->
+        <LinearLayout
+            android:id="@+id/edit_text_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/answer_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Answer here"
+                android:padding="16dp"
+                android:textSize="24dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/result_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#4CAF50"
+                android:padding="16dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/result_header"
+                    style="@style/result_header_style"
+                    android:text="@string/result_header_string"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/result_textView"
+                    style="@style/result_header_style"
+                    android:layout_marginLeft="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@+id/result_header"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </android.support.constraint.ConstraintLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/feedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginLeft="16dp"
+            android:textSize="24sp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</ScrollView>

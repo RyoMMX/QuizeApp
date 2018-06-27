@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">Quiz App</string>
+    <string name="text_view_string">If you can\nof course\n\t\t\t\t\t\t\t(^_^)</string>
+    <string name="let_us_begin_string">Let us begin</string>
+    <string name="result_header_string">Result :</string>
+    <string name="forth_option_radio_button_string">forthOption</string>
+    <string name="third_option_radio_button_string">thirdOption</string>
+    <string name="second_option_radio_button_string">secondOption</string>
+    <string name="first_option_radio_button_string">firstOption</string>
+    <string name="forth_option_checkBox_string">forthOption</string>
+    <string name="third_option_checkBox_string">thirdOption</string>
+    <string name="second_option_checkBox_string">secondOption</string>
+    <string name="first_option_checkBox_string">firstOption</string>
+    <string name="question_text_view_string">question will be here</string>
+    <string name="next_string">Next</string>
+
+
+    <style name="optionCheckBox">
+        <item name="android:textColor">#000000</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:fontFamily">serif</item>
+    </style>
+
+    <style name="optionRadioGroup">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+
+</resources>
